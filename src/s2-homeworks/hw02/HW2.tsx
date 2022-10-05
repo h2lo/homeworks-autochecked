@@ -17,9 +17,9 @@ import s2 from '../../s1-main/App.module.css'
 * */
 
 // types
-export type AffairPriorityType = string // need to fix any
+export type AffairPriorityType = 'high' | 'low' | 'middle' // need to fix any
 export type AffairType = {
-    _id: string // need to fix any
+    _id: number // need to fix any
     name: string // need to fix any
     priority: AffairPriorityType
 }
@@ -35,29 +35,35 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-
-
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
+    if (filter === 'all') return affairs
+    else if (filter === 'high') {
+        return affairs = affairs.filter((a) => a.priority === 'high')
+    } else if (filter === 'low') {
+        return affairs = affairs.filter((a) => a.priority === 'low')
+    } else if (filter === 'middle') {
+        return affairs = affairs.filter((a) => a.priority === 'middle')
+    }
     return affairs // need to fix
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-
-    return affairs // need to fix
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
+    return affairs = affairs.filter((a) => a._id !== _id) // need to fix
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => { // need to fix any
-        // need to fix
+    const deleteAffairCallback = (_id: number) => { // need to fix any
+        setAffairs(affairs.filter((a) => a._id !== _id))
     }
 
     return (
         <div id={'hw2'}>
             <div className={s2.hwTitle}>Homework #2</div>
             <div className={s2.hw}>
+                <hr/>
                 <Affairs
                     data={filteredAffairs}
                     setFilter={setFilter}
@@ -65,6 +71,7 @@ function HW2() {
                     filter={filter}
                 />
             </div>
+            <hr/>
         </div>
     )
 }
