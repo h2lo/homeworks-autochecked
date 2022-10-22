@@ -34,11 +34,11 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 15px solid transparent;
+    border-left: 13px solid transparent;
     border-right: 15px solid #F5F7FB;
     border-top: 15px solid transparent;
     border-bottom: 15px solid #F5F7FB;
-    left: -16px;
+    left: -15px;
     bottom: 0px;
 }
 
