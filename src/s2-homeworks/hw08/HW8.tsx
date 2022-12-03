@@ -57,6 +57,7 @@ const HW8 = () => {
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #8</div>
             <div className={s2.hw}>
+                <hr/>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
                         <SuperButton
@@ -84,7 +85,7 @@ const HW8 = () => {
 
                     <table id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
-                        <tr>
+                        <tr className = {s.trow}>
                             <td className={s.nameCol}>Name</td>
                             <td className={s.ageCol}>Age</td>
                         </tr>
