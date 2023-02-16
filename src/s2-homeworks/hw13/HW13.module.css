@@ -1,22 +1,43 @@
 .buttonsContainer {
+    margin-top: 33px;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 25px;
 }
 
 .responseContainer {
+    display: flex;
+    align-items: center;
+    gap: 100px;
 }
 
 .imageContainer {
+    margin-left: 120px;
 }
 
 .image {
 }
 
-.textContainer{
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #000000;
+    font-weight: 500;
 }
 
 .code {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 12px;
 }
 
 .text {
+    font-size: 16px;
+    line-height: 20px;
 }
+
 .info {
+    margin: 0 auto;
 }
