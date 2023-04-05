@@ -1,27 +1,48 @@
 .tech {
-    width: 50vw;
+    width: 20vw;
 }
 
 .developer {
-
 }
 
 .techHeader {
-    width: 50vw;
+    width: 20vw;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .developerHeader {
-
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .row {
     display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #E5E5E5;
+    width: 64%;
 }
 
 .rowHeader {
     display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    background: #E5E5E5;
+    width: 64%;
+    padding: 10px;
 }
 
 .loading {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

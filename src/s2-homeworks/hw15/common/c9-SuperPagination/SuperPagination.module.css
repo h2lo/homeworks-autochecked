@@ -1,11 +1,19 @@
 .pagination {
     display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 25px;
 }
 
-.text1 {
-
+.text1, .text2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0D0B0C
 }
 
-.text2 {
+/*.text2 {*/
 
-}
+/*}*/
